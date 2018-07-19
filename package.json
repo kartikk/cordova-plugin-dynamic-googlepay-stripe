@@ -1,0 +1,17 @@
+{
+  "name": "cordova.plugin.dynamic.googlepay.stripe",
+  "version": "1.0.0",
+  "description": "A Cordova plugin to enable Google pay with Stripe integration.",
+  "cordova": {
+    "id": "cordova.plugin.dynamic.googlepay.stripe",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Kartikk",
+  "license": "ISC"
+}
