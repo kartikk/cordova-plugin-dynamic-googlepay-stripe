@@ -1,2 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova.plugin.dynamic.googlepay.stripe" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"><name>cordova-plugin-dynamic-googlepay-stripe</name><js-module name="cordova-plugin-dynamic-googlepay-stripe" src="www/cordova-plugin-dynamic-googlepay-stripe.js"><clobbers target="cordova.plugins.cordova-plugin-dynamic-googlepay-stripe" /></js-module><platform name="android"><config-file parent="/*" target="res/xml/config.xml"><feature name="cordova-plugin-dynamic-googlepay-stripe"><param name="android-package" value="cordova.plugin.dynamic.googlepay.stripe.cordova-plugin-dynamic-googlepay-stripe" /></feature></config-file><config-file parent="/*" target="AndroidManifest.xml"></config-file><source-file src="src/android/cordova-plugin-dynamic-googlepay-stripe.java" target-dir="src/cordova/plugin/dynamic/googlepay/stripe/cordova-plugin-dynamic-googlepay-stripe" /></platform></plugin>
+<plugin id="cordova.plugin.dynamic.googlepay.stripe" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<name>CordovaPluginDynamicGooglepayStripe</name>
+<js-module name="CordovaPluginDynamicGooglepayStripe" src="www/CordovaPluginDynamicGooglepayStripe.js">
+<clobbers target="cordova.plugins.CordovaPluginDynamicGooglepayStripe" />
+</js-module>
+<platform name="android">
+
+<config-file parent="/*/application" target="AndroidManifest.xml">
+    <meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true" />
+</config-file>
+
+<config-file parent="/*" target="res/xml/config.xml">
+<feature name="CordovaPluginDynamicGooglepayStripe">
+<param name="android-package" value="CordovaPluginDynamicGooglepayStripe" />
+<param name="onload" value="true" />
+</feature>
+</config-file>
+<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+<source-file src="src/android/CordovaPluginDynamicGooglepayStripe.java" target-dir="src/cordova/plugin/dynamic/googlepay/stripe/CordovaPluginDynamicGooglepayStripe" />
+<framework src="com.google.android.gms:play-services-wallet:15.0.1" />
+<framework src="com.android.support:support-v4:26.0.1" />
+<framework src="com.android.support:appcompat-v7:26.0.1" />
+<framework src="com.stripe:stripe-android:6.1.2" />
+</platform></plugin>
