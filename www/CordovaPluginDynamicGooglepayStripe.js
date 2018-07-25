@@ -46,9 +46,9 @@ var GooglePay = {
             }, 
             'CordovaPluginDynamicGooglepayStripe', 
             'request_payment', 
-            [totalPrice, currency]
-        );
-    },
-};
+            [totalPrice, currency]);
+        })
+    }
+}
 
 module.exports = GooglePay;
